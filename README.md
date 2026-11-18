@@ -7,7 +7,7 @@ Projeto da UXDriven para a Disk Digital, gráfica em San Martin, Recife/PE.
 - `index.html`: estrutura, conteúdo, SEO e dados estruturados locais.
 - `style.css`: identidade visual, grid e responsividade.
 - `script.js`: menu móvel, filtros de soluções, FAQ, animações e montagem do orçamento via WhatsApp.
-- `favicon.svg`: símbolo provisório.
+- `assets/disk-digital-logo.png`: logomarca original fornecida pelo cliente, sem alterações.
 
 ## Publicação na Vercel
 
@@ -20,7 +20,7 @@ O site não exige instalação de dependências, compilação, back-end ou chave
 
 ## Conteúdo e revisão
 
-- **Identidade visual provisória:** logotipo tipográfico e paleta criados para esta demonstração. Substituir pela identidade oficial quando fornecida.
+- **Identidade visual:** utiliza a logomarca original fornecida pelo cliente. O layout e a paleta de interface são uma proposta da UXDriven inspirada nas cores da marca, sujeita a aprovação.
 - **Imagens:** fotografias de banco de imagens Unsplash, servidas por `images.unsplash.com`, usadas apenas para ilustrar segmentos e produtos. Não são trabalhos ou instalações da Disk Digital.
 - **Produtos:** categorias apresentadas como possibilidades para orçamento, sujeitas à confirmação da empresa.
 - **Dados públicos:** telefone, endereço, horários e avaliação do perfil Google consultados em novembro de 2026. Validar antes da publicação comercial.

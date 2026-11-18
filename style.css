@@ -24,14 +24,9 @@ button{cursor:pointer}
 .site-header{position:sticky;z-index:80;top:0;background:#f7f7f3ee;border-bottom:1px solid #11111110;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 .nav-wrap{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:28px}
 .brand{display:inline-flex;align-items:center;gap:11px;white-space:nowrap}
-.brand-symbol{width:34px;height:34px;display:grid;grid-template-columns:repeat(2,1fr);gap:3px;transform:rotate(-12deg)}
-.brand-symbol i{background:#3652ed;border-radius:2px;display:block}
-.brand-symbol i:nth-child(2){background:#d7fb64}
-.brand-symbol i:nth-child(3){background:#161819}
-.brand-symbol i:nth-child(4){background:#ff8f4a}
-.brand-words{font-family:"Space Grotesk",sans-serif;font-size:26px;font-weight:700;letter-spacing:-.085em;line-height:1}
-.brand-words>span:first-child{font-weight:400;letter-spacing:-.07em}
-.brand-period{color:var(--blue)}
+.brand-logo{height:68px;width:68px;display:block;object-fit:contain;background:#fff;border-radius:50%;padding:2px;box-shadow:0 3px 12px #1111110a}
+.brand-footer .brand-logo{width:80px;height:80px;padding:3px;box-shadow:none}
+.site-header:after{content:"";position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#fc0088 0% 25%,#01b9e5 25% 50%,#00e984 50% 75%,#ffe100 75%);opacity:.75;pointer-events:none}
 .desktop-nav{display:flex;align-items:center;gap:clamp(18px,2.8vw,38px);margin-left:auto}
 .desktop-nav a{font-size:13px;font-weight:700;position:relative;transition:color .2s}
 .desktop-nav a:after{content:"";position:absolute;bottom:-6px;left:0;width:0;height:2px;background:var(--blue);transition:width .25s}
@@ -59,7 +54,7 @@ button{cursor:pointer}
 .menu-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mobile-menu{display:none}
 .hero{position:relative;overflow:hidden;padding-top:clamp(55px,7vw,95px);padding-bottom:0}
-.hero-grid{display:grid;grid-template-columns:51% 49%;align-items:center;gap:10px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,1fr);align-items:center;gap:10px}
 .hero-copy{position:relative;z-index:2;padding:4px 0 52px}
 .eyebrow,.section-kicker{font-size:11px;letter-spacing:.13em;font-weight:800;display:flex;align-items:center;gap:12px}
 .eyebrow{color:#4a5153}
@@ -69,7 +64,7 @@ h1,h2,h3,p{margin-top:0}
 h1,h2,h3{font-family:"Space Grotesk",sans-serif}
 .hero h1{font-size:clamp(62px,6.7vw,103px);letter-spacing:-.088em;line-height:.98;font-weight:700;margin:35px 0 28px}
 .hero-highlight{color:var(--blue);position:relative}
-.hero-star{color:#f39d58;font-size:.31em;vertical-align:top;display:inline-block;transform:translate(.22em,-.08em);animation:rotate-star 18s linear infinite}
+.hero-star{color:#ed0a91;font-size:.31em;vertical-align:top;display:inline-block;transform:translate(.22em,-.08em);animation:rotate-star 18s linear infinite}
 @keyframes rotate-star{to{transform:translate(.22em,-.08em) rotate(360deg)}}
 .hero-description{color:#5b6262;max-width:500px;line-height:1.7;font-size:clamp(16px,1.45vw,19px)}
 .hero-buttons{display:flex;gap:24px;align-items:center;margin:32px 0 50px;flex-wrap:wrap}
@@ -91,6 +86,8 @@ h1,h2,h3{font-family:"Space Grotesk",sans-serif}
 .hero-corner-sticker span{font-size:10px;letter-spacing:.13em}
 .hero-corner-sticker strong{font-size:50px;letter-spacing:-.1em;line-height:1}
 .visual-bottom-label{position:absolute;left:35px;bottom:30px;display:flex;align-items:center;gap:9px;color:#fff;font-size:10px;font-weight:900;letter-spacing:.11em}
+.hero-original-logo{position:absolute;z-index:3;right:20px;bottom:20px;width:112px;height:112px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 14px 30px #1115}
+.hero-original-logo img{width:102px;height:102px;object-fit:contain}
 .label-dot{width:7px;height:7px;background:var(--lime);border-radius:50%}
 .hero-decor{position:absolute;pointer-events:none}
 .hero-decor-one{width:175px;height:175px;z-index:-1;right:-70px;bottom:3px;border-radius:50%;background:repeating-linear-gradient(0deg,#303cc91a,#303cc91a 5px,transparent 5px,transparent 10px)}
@@ -225,8 +222,6 @@ a.contact-card:hover .contact-icon{background:var(--blue);color:#fff}
 .site-footer{background:#12171b;color:#fff}
 .footer-main{padding-top:60px;padding-bottom:22px}
 .footer-top{display:flex;align-items:center;justify-content:space-between}
-.brand-footer .brand-words{color:#fff}
-.brand-footer .brand-period{color:var(--lime)}
 .back-to-top{font-size:10px;letter-spacing:.1em;font-weight:800;color:#c6cccd}
 .back-to-top span{font-size:21px;margin-left:13px}
 .footer-mid{display:flex;justify-content:space-between;gap:50px;margin:60px 0 85px}
@@ -283,7 +278,8 @@ a.contact-card:hover .contact-icon{background:var(--blue);color:#fff}
  :root{--pad:22px}
  .topbar-inner{font-size:9px}
  .topbar-right{display:none}
- .brand-words{font-size:25px}
+ .brand-logo{width:58px;height:58px}
+ .brand-footer .brand-logo{width:72px;height:72px}
  .hero{padding-top:54px}
  .hero h1{font-size:clamp(57px,13.1vw,81px);margin:26px 0}
  .hero-description{font-size:16px}
@@ -293,6 +289,8 @@ a.contact-card:hover .contact-icon{background:var(--blue);color:#fff}
  .hero-canvas{height:440px;border-radius:160px 160px 8px 8px}
  .hero-corner-sticker{width:99px;height:99px;right:0}
  .hero-corner-sticker strong{font-size:41px}
+ .hero-original-logo{width:92px;height:92px;right:13px;bottom:17px}
+ .hero-original-logo img{width:84px;height:84px}
  .hero-bottom{margin-top:20px}
  .hero-bottom span:first-child{display:none}
  .ticker-band{height:65px}
